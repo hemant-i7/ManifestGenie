@@ -1,0 +1,115 @@
+.ai-img-generator {
+ display: flex;
+ flex-direction: column;
+ margin:auto;
+ align-items: center;
+ margin-top: 80px;
+ margin-bottom: 20px;
+ gap: 30px
+
+}
+
+.header {
+    font-size: 70px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+   
+
+    padding-bottom: 30px;
+
+}
+
+.header span {
+
+    color: rgb(128, 0, 255);
+    
+}
+
+.img-loading {
+    display: flex;
+    flex-direction: column;
+     
+}
+
+.img-loading img{
+    width: 512px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 48px -8px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 4px 48px -8px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 4px 48px -8px rgba(0,0,0,0.6);
+    
+
+}
+
+.search-box {
+    margin-top: 20px;
+    display: flex;
+    width: 1000px;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgb(39, 1, 52);
+    box-shadow: 0px 4px 48px -8px rgba(0,0,0,0.6);
+-webkit-box-shadow: 0px 4px 48px -8px rgba(0,0,0,0.6);
+-moz-box-shadow: 0px 4px 48px -8px rgba(0,0,0,0.6);
+
+}
+
+.search-input {
+
+    width: 600px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: rgb(130, 4, 255);
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.search-input::placeholder{
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.generate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 85px;
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: rgb(140, 0, 255);
+    cursor: pointer;
+
+}
+
+.gradient {
+	height: fit-content;
+	z-index: 3;
+	width: 100%;
+	max-width: 640px;
+	background-image: radial-gradient(
+			at 27% 37%,
+			hsla(215, 98%, 61%, 1) 0px,
+			transparent 0%
+		),
+		radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+		radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+		radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+		radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+		radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+		radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	filter: blur(100px) saturate(150%);
+	top: 80px;
+	opacity: 0.15;
+    
+}
