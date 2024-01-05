@@ -5,6 +5,7 @@ import Bg_image from '../Assets/rk.jpg';
 const ImageGenerator = () => {
   const [image_url, setImage_url] = useState('/');
   let inputRef = useRef(null);
+  const [loading,setLoading] = useState()
 
   const ImageGenerator = async () => {
     if (inputRef.current.value === '') {
@@ -43,6 +44,13 @@ setImage_url(data_array[0].url);
         <div className="image">
           <img src={image_url === '/' ? Bg_image : image_url} alt="" />
         </div>
+         <div className="loading">
+          <div className="loading-bar">
+            <div className="hasan"></div>
+
+            <div className="loading-text">Loading...</div>
+          </div>
+         </div>
       </div>
       <div className="search-box">
         <input

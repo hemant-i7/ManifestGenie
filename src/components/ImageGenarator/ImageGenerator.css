@@ -113,3 +113,19 @@
 	opacity: 0.15;
     
 }
+
+.loading-bar {
+    width: 512px;
+    height:8px;
+    background: palevioletred;
+    
+
+
+
+
+}
+
+.loading-text{
+    font-size: 15px;
+    padding-top: 20px;
+}
