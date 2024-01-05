@@ -44,13 +44,6 @@ setImage_url(data_array[0].url);
         <div className="image">
           <img src={image_url === '/' ? Bg_image : image_url} alt="" />
         </div>
-         <div className="loading">
-          <div className="loading-bar">
-            <div className="hasan"></div>
-
-            <div className="loading-text">Loading...</div>
-          </div>
-         </div>
       </div>
       <div className="search-box">
         <input
