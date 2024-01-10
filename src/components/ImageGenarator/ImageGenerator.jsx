@@ -5,7 +5,8 @@ import Bg_image from '../Assets/rk.jpg';
 const ImageGenerator = () => {
   const [image_url, setImage_url] = useState('/');
   let inputRef = useRef(null);
-  const [loading,setLoading] = useState()
+  const [theme, setTheme] = useState('dark');
+  const [loading, setLoading] = useState();
 
   const ImageGenerator = async () => {
     if (inputRef.current.value === '') {
@@ -31,14 +32,26 @@ const ImageGenerator = () => {
 
     let data = await response.json();
     let data_array = data.data;
-setImage_url(data_array[0].url);
+    setImage_url(data_array[0].url);
+  };
+
+  const toggleTheme = () => {
+    const themeContainer = document.querySelector('.theme-container');
+    themeContainer.classList.toggle('shadow-dark');
+    themeContainer.classList.toggle('shadow-light');
+
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   return (
-    <div className="ai-img-generator">
-      <div class="theme-container shadow-dark">
-  <img id="theme-icon"    src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg" alt="ERR"/>
-</div>
+    <div className={`ai-img-generator ${theme === 'dark' ? 'dark' : 'light'}`}>
+      <div className="theme-container" onClick={toggleTheme}>
+        <img
+          id="theme-icon"
+          src={theme === 'dark' ? "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg" : "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg"}
+          alt="Theme Icon"
+        />
+      </div>
       <div className="gradient"></div>
       <div className="header">
         Ai image <span>Generator</span>
