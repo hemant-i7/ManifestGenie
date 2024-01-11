@@ -5,7 +5,7 @@ import Bg_image from '../Assets/rk.jpg';
 const ImageGenerator = () => {
   const [image_url, setImage_url] = useState('/');
   let inputRef = useRef(null);
-  const [loading,setLoading] = useState()
+ 
 
   const ImageGenerator = async () => {
     if (inputRef.current.value === '') {
@@ -36,9 +36,7 @@ setImage_url(data_array[0].url);
 
   return (
     <div className="ai-img-generator">
-      <div class="theme-container shadow-dark">
-  <img id="theme-icon"    src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg" alt="ERR"/>
-</div>
+      
       <div className="gradient"></div>
       <div className="header">
         Ai image <span>Generator</span>
