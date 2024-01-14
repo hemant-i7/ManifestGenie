@@ -39,7 +39,7 @@ setImage_url(data_array[0].url);
       
       <div className="gradient"></div>
       <div className="header">
-        Ai image <span>Generator</span>
+        image <span>Generator</span>
       </div>
       <div className="img-loading">
         <div className="image">
