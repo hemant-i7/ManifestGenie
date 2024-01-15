@@ -54,7 +54,7 @@ setImage_url(data_array[0].url);
           placeholder="describe what you want to see"
         />
         <div className="generate-btn" onClick={() => ImageGenerator()}>
-          Generate
+          Generate Imgae
         </div>
       </div>
     </div>
